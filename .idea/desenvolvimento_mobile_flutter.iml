@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/alcool_gasolina/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/alcool_gasolina/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/alcool_gasolina/build" />
+      <excludeFolder url="file://$MODULE_DIR$/atm_consultaoria/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/atm_consultaoria/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/atm_consultaoria/build" />
+      <excludeFolder url="file://$MODULE_DIR$/entrada_de_dados/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/entrada_de_dados/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/entrada_de_dados/build" />
+      <excludeFolder url="file://$MODULE_DIR$/frases_do_dia/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/frases_do_dia/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/frases_do_dia/build" />
+      <excludeFolder url="file://$MODULE_DIR$/joken_po/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/joken_po/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/joken_po/build" />
+      <excludeFolder url="file://$MODULE_DIR$/navegacao_entre_telas/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/navegacao_entre_telas/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/navegacao_entre_telas/build" />
+      <excludeFolder url="file://$MODULE_DIR$/primeiro_projeto/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/primeiro_projeto/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/primeiro_projeto/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
