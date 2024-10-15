@@ -20,6 +20,7 @@ class _TelaClientesState extends State<TelaClientes> {
         child: SingleChildScrollView(
           padding: EdgeInsets.all(50),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 16),
@@ -27,14 +28,20 @@ class _TelaClientesState extends State<TelaClientes> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Image.asset("images/detalhe_cliente.png"),
-                    Text("Clientes", style: TextStyle(fontSize: 18, color: Colors.deepOrange),)
+                    Text("Clientes",),
                   ],
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 16),
-                child: Text(""),
+                child: Image.asset("images/cliente1.png"),
               ),
+              Text("Empresa de software"),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Image.asset("images/cliente2.png"),
+              ),
+              Text("Empresa de auditoria"),
             ],
           ),
         ),

@@ -27,7 +27,7 @@ class _TelaEmpresaState extends State<TelaEmpresa> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Image.asset("images/detalhe_empresa.png"),
-                    Text("Sobre a Empresa", style: TextStyle(fontSize: 18, color: Colors.deepOrange),)
+                    Text("Empresa",),
                   ],
                 ),
               ),

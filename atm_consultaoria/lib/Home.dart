@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                 GestureDetector(
-                  onTap: _abrirContato ,
+                  onTap: _abrirClientes ,
                   child: Image.asset("images/menu_cliente.png"),
                 ),
                 GestureDetector(

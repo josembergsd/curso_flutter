@@ -20,6 +20,7 @@ class _TelaServicosState extends State<TelaServicos> {
         child: SingleChildScrollView(
           padding: EdgeInsets.all(50),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: EdgeInsets.only(top: 16),
@@ -27,13 +28,21 @@ class _TelaServicosState extends State<TelaServicos> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Image.asset("images/detalhe_servico.png"),
-                    Text("Nossoa Serviços", style: TextStyle(fontSize: 18, color: Colors.deepOrange),)
+                    Text("Serviços"),
                   ],
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 16),
-                child: Text(""),
+                child: Text("Consultaoria"),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text("Cálculo de Preços"),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text("Acompanhamento de Projetos"),
               ),
             ],
           ),
