@@ -24,6 +24,18 @@
       <excludeFolder url="file://$MODULE_DIR$/primeiro_projeto/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/primeiro_projeto/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/primeiro_projeto/build" />
+      <excludeFolder url="file://$MODULE_DIR$/cara_ou_coroa/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/cara_ou_coroa/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/cara_ou_coroa/build" />
+      <excludeFolder url="file://$MODULE_DIR$/consumindo_api/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/consumindo_api/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/consumindo_api/build" />
+      <excludeFolder url="file://$MODULE_DIR$/dados_entre_telas/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/dados_entre_telas/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/dados_entre_telas/build" />
+      <excludeFolder url="file://$MODULE_DIR$/nomeando_rotas/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/nomeando_rotas/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/nomeando_rotas/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
