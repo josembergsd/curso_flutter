@@ -1,29 +1,45 @@
+import 'dart:async';
+
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-var CHAVE_YOUTUBE_API = Uri.parse("AIzaSyB9SZ6CxsesgBzkruGoe34Gv3ApFc0-Gfc");
-var ID_CANAL = Uri.parse("UCm_nEAH7DCfjmXUbNkN6JFw");
-var URL_BASE = Uri.parse("https://www.googleapis.com/youtube/v3/");
+import '../model/Video.dart';
+
+const chaveYoutubeApi = "AIzaSyB9SZ6CxsesgBzkruGoe34Gv3ApFc0-Gfc";
+const idCanal = "UCm_nEAH7DCfjmXUbNkN6JFw";
+const urlBase = "https://www.googleapis.com/youtube/v3";
 
 class Api {
-  pesquisar(String pesquisa) async {
-      http.Response response = await http.get(
-        URL_BASE.resolve("/search"
-            "?part=snippet"
-            "&type=video"
-            "&maxResults=20"
-            "&order=date"
-            "&key=$CHAVE_YOUTUBE_API"
-            "&channelId=$ID_CANAL"
-            "&q=$pesquisa")
-      );
 
-      if( response.statusCode == 200) {
-        //print("Respnose " + response.body);
-        Map<String, dynamic> dadosJson = json.decode(response.body);
-        print("Response ${dadosJson["items"]}");
+  final client = http.Client();
+
+  Future<List<Video>> pesquisar(String pesquisa) async {
+
+    String url = "$urlBase"
+        "/search"
+        "?part=snippet"
+        "&type=video"
+        "&maxResults=20"
+        "&order=date"
+        "&key=$chaveYoutubeApi"
+        "&channelId=$idCanal"
+        "&q=$pesquisa";
+
+        http.Response resp = await client.get(Uri.parse(url));
+
+      if( resp.statusCode == 200) {
+        Map<String, dynamic> dadosJson = json.decode(resp.body);
+        List<Video> videos = List<Video>.from(
+          dadosJson["items"].map<Video>(
+              (map) {
+                return Video.fromJson(map);
+              }
+          )
+        );
+        return videos;
       }else {
 
       }
+    return pesquisar(pesquisa);
   }
 }
