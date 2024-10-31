@@ -19,7 +19,6 @@ class _StartState extends State<Start> {
 
   @override
   Widget build(BuildContext context) {
-
     return FutureBuilder<List<Video>>(
         future: _listarVideos(),
         builder: (context, snapshot) {
@@ -63,7 +62,6 @@ class _StartState extends State<Start> {
               }else {
                 return Text("Nenhum dado a ser exibido");
               }
-              break;
           }
 
         }

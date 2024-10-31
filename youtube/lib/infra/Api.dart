@@ -7,39 +7,44 @@ import '../model/Video.dart';
 
 const chaveYoutubeApi = "AIzaSyB9SZ6CxsesgBzkruGoe34Gv3ApFc0-Gfc";
 const idCanal = "UCm_nEAH7DCfjmXUbNkN6JFw";
-const urlBase = "https://www.googleapis.com/youtube/v3";
+const urlBase = "https://www.googleapis.com/youtube/v3/";
 
 class Api {
 
   final client = http.Client();
 
   Future<List<Video>> pesquisar(String pesquisa) async {
-
-    String url = "$urlBase"
-        "/search"
+    final String url = Uri.parse("${urlBase}search"
         "?part=snippet"
         "&type=video"
         "&maxResults=20"
         "&order=date"
         "&key=$chaveYoutubeApi"
         "&channelId=$idCanal"
-        "&q=$pesquisa";
+        "&q=$pesquisa",
+    ).toString();
 
-        http.Response resp = await client.get(Uri.parse(url));
 
-      if( resp.statusCode == 200) {
-        Map<String, dynamic> dadosJson = json.decode(resp.body);
-        List<Video> videos = List<Video>.from(
-          dadosJson["items"].map<Video>(
-              (map) {
-                return Video.fromJson(map);
-              }
-          )
-        );
+    try {
+      http.Response resp = await client.get(Uri.parse(url));
+
+      if (resp.statusCode == 200) {
+        final Map<String, dynamic> dadosJson = json.decode(resp.body);
+        final List<Video> videos = (dadosJson["items"] as List)
+            .map<Video>((map) => Video.fromJson(map))
+            .toList();
+
+        // for (var video in videos) {
+        //   print("resultado: ${video.titulo}");
+        // }
         return videos;
-      }else {
-
+      } else {
+        print("Erro ao buscar vídeos: ${resp.statusCode}");
+        return [];
       }
-    return pesquisar(pesquisa);
+    } catch (e) {
+      print("Erro na requisição: $e");
+      return [];
+    }
   }
 }
