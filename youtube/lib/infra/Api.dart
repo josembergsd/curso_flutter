@@ -34,9 +34,9 @@ class Api {
             .map<Video>((map) => Video.fromJson(map))
             .toList();
 
-        // for (var video in videos) {
-        //   print("resultado: ${video.titulo}");
-        // }
+        for (var video in videos) {
+          print("resultado: ${video.titulo}");
+        }
         return videos;
       } else {
         print("Erro ao buscar vídeos: ${resp.statusCode}");
