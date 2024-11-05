@@ -5,8 +5,13 @@ class Video {
   String imagem;
   String canal;
 
-
-  Video({this.id = "", this.titulo = "", this.descricao = "", this.imagem = "", this.canal = ""});
+  Video({
+    this.id = "",
+    this.titulo = "",
+    this.descricao = "",
+    this.imagem = "",
+    this.canal = "",
+  });
 
   //factory otimiza para menos uso de memória
   factory Video.fromJson(Map<String, dynamic> json){
@@ -18,4 +23,5 @@ class Video {
       descricao: json["snippet"]["description"],
     );
   }
+
 }
